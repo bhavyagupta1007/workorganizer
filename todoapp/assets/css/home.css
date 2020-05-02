@@ -1,0 +1,121 @@
+body{
+
+    font-weight:normal;
+    background-color: lightgrey;
+    margin-left:225px;
+    margin-right:220px;
+}
+#box{
+  
+    background-color: white;
+    height:75vh;
+    width:70vw;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+}
+#heading{
+    font-size: 35px;
+    text-align:center;
+    margin-top:30px;
+   color:gray;
+   font-weight: normal;
+}
+#first_button{
+    background-color: black;
+    height:65px;
+    width:140px;
+    color:white;
+    margin-left:25vw;
+}
+#second_button{
+    margin-left: 475px;
+    margin-top: -81px;
+    background-color: red;
+    height:65px;
+    width:140px;
+    color:white;
+}
+#desc{
+    margin-left:10px;
+    margin-top:5px;
+    font-family: sans-serif;
+    text-align: left;
+    color: gray;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+
+}
+#categ{
+    margin-top:5px;
+    margin-left:10px;
+    font-family: sans-serif;
+    text-align: left;
+    color:gray;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+}
+#datee{
+    margin-top:-59px;
+    margin-left:650px;
+    font-family: sans-serif;
+    text-align: left;
+    color:gray;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: hidden;
+}
+#DATE{
+     position: relative;
+     left:650px;
+     top:-45px;
+    color:gray;
+    font-family: sans-serif;
+    display:flex;
+    justify-content:right;
+    
+}
+#DESC{
+    color:gray;
+    font-family: sans-serif;
+    margin-left:10px;
+}
+#CATEG{
+    color:gray;
+    font-family: sans-serif;
+    margin-left:10px;
+}
+#list
+{
+    list-style: none;
+}
+#bb{
+    margin-top:-50px;
+    margin-left:650px;
+    height: 40px;
+    color:white;
+    width: 100px;
+}
+#hh
+{
+    margin-top:-25px;
+}
+#hhh
+{
+    margin-top: -50px;
+}
+#datebox
+{
+    margin-left: 50px;
+}
+#unique
+{
+    margin-top: 25px;
+    margin-right: 25px;
+}
+

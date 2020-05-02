@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>
+            <%= locals.title%>
+        </title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+        <link rel="stylesheet" href="/css/home.css">
+    </head>
+    <body>
+    <div id="box">
+
+       <h5 id="heading">TO DO APP</h5>
+       <hr id="hhh">
+        <form action="/create-list" method="POST">
+        <div id="matter">
+            <label id="DESC" for="desc"><b>DESCRIPTION</b></label>
+            <br>
+            <input type="text" id="desc"name="description" placeholder="What do you need to do?" required>
+            <hr>
+        </div>
+            <label id="CATEG" for="categ"><b>CATEGORY</b></label>
+            <br>
+            <select name = "category" id="categ" required>
+                <option value="" disabled selected hidden>Choose a category</option>
+                <option value = "Personal">Personal</option>Personal</option>
+                <option value = "Work">Work</option>
+                <option value = "School">School</option>
+                <option value = "Cleaning">Cleaning</option>
+                <option value = "Others">Others</option>
+             </select>
+             <label id ="DATE"for="datee"><b>DUE DATE</b></label>
+             <br>
+            <input type="date" id="datee" name="duedate" placeholder="Enter date">
+            <div>
+                <hr id="hh">
+            <button id="first_button" type="submit">
+                <i class="fas fa-plus"></i>
+                Add task
+            </button>
+            
+            </div>
+           
+        </form>
+    <div>
+        <form action="/delete-list" method="GET">
+            <button  id="second_button"type="submit" >
+                <i class="fas fa-trash"></i>
+                Delete task
+            </button>  
+            <hr>
+            <ul id="list">
+                   
+                <% for (let i of tasks_list) { %> 
+                   <div class="contact"> 
+                    <li>
+                        <input type="checkbox" id="unique" name="<%= i._id %>">
+                        <label for="unique">
+                            <p style="display:inline"><%= i.description %></p>
+                            <br>
+                            <br>
+                            <div id="datebox">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span><%= i.duedate.toLocaleString('default', { month: 'short' })%></span>
+                            <span><%= i.duedate.getDate()%></span>
+                            <span>,<span>
+                            <span><%= i.duedate.getFullYear()%></span>
+                            </div>
+                            <button style="background-color: grey;" id="bb">
+                                <%= i.category %>
+                            </button>
+                            <br>
+                            <br>
+                            <hr>
+                        </li>
+                    </label>
+                    </div>
+                    
+                <% } %>
+            </ul>
+            
+        </form>
+    </div>
+       
+
+           
+
+    </div>  
+        <script type="text/javascript" src="/js/home.js"></script>
+    </body>
+</html>
